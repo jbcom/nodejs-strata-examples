@@ -33,7 +33,7 @@ function WaterPlane() {
           float wave3 = sin((pos.x + pos.y) * 0.2 + uTime * 1.3) * 0.15;
           pos.z += wave1 + wave2 + wave3;
 
-          vPosition = pos;
+          vPosition = (modelMatrix * vec4(pos, 1.0)).xyz;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
         }
       `,

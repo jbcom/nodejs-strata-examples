@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import * as THREE from 'three';
 
 /**
- * Simple terrain using marching cubes
+ * Simple terrain using a procedural heightmap
  *
  * This example shows how to create procedural terrain with Strata.
  * For production use, import from @jbcom/strata instead.
