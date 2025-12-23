@@ -1,6 +1,6 @@
 packages:
-  - 'basic-terrain'
-  - 'water-scene'
-  - 'sky-volumetrics'
-  - 'vegetation-showcase'
-  - 'api-showcase'
+  - "basic-terrain"
+  - "water-scene"
+  - "sky-volumetrics"
+  - "vegetation-showcase"
+  - "api-showcase"
