@@ -1,22 +1,21 @@
 # Active Context
 
 ## Current Focus
-- Configuring 21st.dev Magic MCP for local Cursor IDE integration.
-- Fixing Issue #5.
+- Fixed CI failures in PR #6 by updating checkout authentication in `ollama-pr-review.yml`.
+- Addressed security concerns in `.cursor/mcp.json` by removing literal environment variable placeholders.
 
 ## Recent Changes
-- Created `.cursor/mcp.json` with `21st-magic` server configuration.
-- Initialized Memory Bank protocol.
+- Updated `.github/workflows/ollama-pr-review.yml` to use `GITHUB_TOKEN` consistently for checkout.
+- Removed `env` block from `.cursor/mcp.json` to prevent credential exposure and improve reliability.
+- Verified other CI checks.
 
 ## Next Steps
-- Verify the configuration.
-- Update progress log.
+- Monitor new CI runs for PR #6.
+- Merge PR #6 once all checks pass.
 
 ## Session: 2025-12-24
 
 ### Completed
-- [x] Configured 21st.dev Magic MCP in `.cursor/mcp.json`.
-- [x] Established Memory Bank protocol in the repository.
-
-### For Next Agent
-- [ ] No immediate tasks. The MCP configuration is ready for use.
+- [x] Fixed checkout authentication in `ollama-pr-review.yml`.
+- [x] Improved security in `.cursor/mcp.json`.
+- [x] Verified CI status for PR #6.
