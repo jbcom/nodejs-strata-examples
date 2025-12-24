@@ -8,5 +8,16 @@
     "url": "https://github.com/jbcom/nodejs-strata-examples"
   },
   "author": "Jon Bogaty <jon@jonbogaty.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev:terrain": "pnpm --filter basic-terrain dev",
+    "dev:water": "pnpm --filter water-scene dev",
+    "dev:sky": "pnpm --filter sky-volumetrics dev",
+    "dev:vegetation": "pnpm --filter vegetation-showcase dev",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
 }
