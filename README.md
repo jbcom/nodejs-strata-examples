@@ -69,18 +69,16 @@ All examples depend on the published `@jbcom/strata` npm package.
 
 ## CI/CD
 
-This repository uses GitHub Actions to verify that all examples build correctly with the latest version of `@jbcom/strata`.
+This repository uses GitHub Actions for fully automated CI/CD:
+- **Automatic Releases**: Uses `semantic-release` with conventional commits to automate versioning, changelog generation, and GitHub releases.
+- **Verification**: Builds and checks all examples on every push and pull request.
+- **Live Deployment**: Merged changes to `main` are automatically deployed to GitHub Pages.
 
-The verification runs:
-- On every push to `main`
-- On every pull request
-- Weekly to check for breaking changes in `@jbcom/strata`
-
-### Live Deployment
-Successfully merged PRs to `main` are automatically deployed to GitHub Pages.
-
-### Visual Regression Tests (Planned)
-Future updates will include automated visual regression tests using Playwright/E2E to ensure visual consistency across strata versions.
+### Conventional Commits
+This repository enforces [Conventional Commits](https://www.conventionalcommits.org/). This allows for automated semantic versioning. Use the following prefixes:
+- `feat:` for new features (triggers MINOR release)
+- `fix:` for bug fixes (triggers PATCH release)
+- `docs:`, `style:`, `refactor:`, `perf:`, `test:`, `chore:` for other changes
 
 ## License
 
