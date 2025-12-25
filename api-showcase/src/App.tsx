@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { VegetationExamples, WaterExamples, SkyExamples } from './examples';

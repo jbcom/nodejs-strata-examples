@@ -8,7 +8,8 @@
  */
 
 import * as THREE from 'three';
-import type { BiomeData } from '@jbcom/strata';
+// import type { BiomeData } from '@jbcom/strata';
+type BiomeData = any;
 import {
     createVegetationMesh,
     createGrassInstances,
@@ -38,7 +39,7 @@ import {
  */
 export function Example_BasicGrassInstances() {
     // Define simple biomes
-    const biomes: BiomeData[] = [
+    const biomes: any[] = [
         {
             threshold: 0,
             color: 0x3a5a2a,
@@ -47,7 +48,7 @@ export function Example_BasicGrassInstances() {
     ];
 
     // Create 1000 grass instances over a 50x50 area
-    const grassMesh = createGrassInstances(1000, 50, biomes);
+    const grassMesh = createGrassInstances(1000, 50, biomes as any);
 
     return {
         mesh: grassMesh,
