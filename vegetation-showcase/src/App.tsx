@@ -17,7 +17,7 @@ import {
     sdTerrain,
     getBiomeAt,
 } from '@jbcom/strata';
-type BiomeData = any;
+import type { BiomeData } from '@jbcom/strata';
 
 /**
  * Vegetation Showcase Example
@@ -105,16 +105,16 @@ function ProceduralTerrain() {
             const z = positions.getZ(i);
 
             // Base terrain using FBM (Fractional Brownian Motion)
-            const baseHeight = fbm(x * 0.02, z * 0.02, octaves, roughness) * amplitude;
+            const baseHeight = fbm(x * 0.02, z * 0.02, octaves, roughness, seed) * amplitude;
 
             // Large-scale features (mountains and valleys)
-            const largeScale = fbm(x * 0.008, z * 0.008, 4, 2.0) * amplitude * 1.5;
+            const largeScale = fbm(x * 0.008, z * 0.008, 4, 2.0, seed + 100) * amplitude * 1.5;
 
             // Medium-scale features (hills)
-            const mediumScale = fbm(x * 0.04, z * 0.04, 3, 2.5) * amplitude * 0.5;
+            const mediumScale = fbm(x * 0.04, z * 0.04, 3, 2.5, seed + 200) * amplitude * 0.5;
 
             // Small-scale detail (bumps and dips)
-            const smallScale = fbm(x * 0.1, z * 0.1, 2, 3.0) * amplitude * 0.2;
+            const smallScale = fbm(x * 0.1, z * 0.1, 2, 3.0, seed + 300) * amplitude * 0.2;
 
             // River valley carved through terrain
             const distanceFromRiver = Math.abs(z - 10 + Math.sin(x * 0.05) * 15);
@@ -130,8 +130,8 @@ function ProceduralTerrain() {
             positions.setY(i, height);
 
             // Color based on height and biome
-            const biomeValue = fbm(x * 0.03, z * 0.03, 3, 2.0);
-            const moisture = fbm(x * 0.05, z * 0.05, 2, 2.0);
+            const biomeValue = fbm(x * 0.03, z * 0.03, 3, 2.0, seed + 500);
+            const moisture = fbm(x * 0.05, z * 0.05, 2, 2.0, seed + 600);
 
             let color = new THREE.Color();
 

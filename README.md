@@ -2,7 +2,14 @@
 
 Example applications for [Strata 3D](https://github.com/jbcom/nodejs-strata).
 
+## Live Demos
+
+Visit the **[Live Examples Dashboard](https://jbcom.github.io/nodejs-strata-examples/)** to see Strata 3D in action.
+
 ## Examples
+
+### Live Dashboard (New!)
+All examples are now available in a single [Live Examples Dashboard](https://jbcom.github.io/nodejs-strata-examples/).
 
 ### Basic Terrain (`basic-terrain/`)
 Simple procedural terrain with heightmap generation and water plane.
@@ -34,6 +41,7 @@ pnpm dev:terrain    # Basic terrain
 pnpm dev:water      # Water scene
 pnpm dev:sky        # Sky & volumetrics
 pnpm dev:vegetation # Vegetation showcase
+pnpm dev:api        # API showcase
 ```
 
 ## Requirements
@@ -47,37 +55,17 @@ pnpm dev:vegetation # Vegetation showcase
 ```
 strata-examples/
 ├── basic-terrain/       # Simple terrain example
-│   ├── src/
-│   │   ├── App.tsx
-│   │   └── core-usage.ts
-│   └── package.json
 ├── water-scene/         # Advanced water example
 ├── sky-volumetrics/     # Sky and volumetric effects
 ├── vegetation-showcase/ # Instanced vegetation
 ├── api-showcase/        # API reference examples
+├── scripts/             # Build and collection utilities
 └── pnpm-workspace.yaml
 ```
 
 ## Dependencies
 
 All examples depend on the published `@jbcom/strata` npm package.
-
-```json
-{
-  "dependencies": {
-    "@jbcom/strata": "^1.3.0",
-    "@react-three/fiber": "^9.0.0",
-    "react": "^18.3.0",
-    "three": "^0.170.0"
-  }
-}
-```
-
-## Related
-
-- [Strata 3D](https://github.com/jbcom/nodejs-strata) - Full procedural graphics library
-- [Strata Shaders](https://github.com/jbcom/nodejs-strata-shaders) - GLSL shader collection
-- [Strata Presets](https://github.com/jbcom/nodejs-strata-presets) - Pre-configured settings
 
 ## CI/CD
 
@@ -87,6 +75,9 @@ The verification runs:
 - On every push to `main`
 - On every pull request
 - Weekly to check for breaking changes in `@jbcom/strata`
+
+### Live Deployment
+Successfully merged PRs to `main` are automatically deployed to GitHub Pages.
 
 ### Visual Regression Tests (Planned)
 Future updates will include automated visual regression tests using Playwright/E2E to ensure visual consistency across strata versions.

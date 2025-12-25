@@ -17,5 +17,6 @@ print(f"Result: {result}")
 
 ## Next Steps
 
+- **[View Live Examples](https://jbcom.github.io/nodejs-strata-examples/)** - See Strata 3D in action
 - Check out the [API Reference](../api/index.rst) for detailed documentation
 - See [Contributing](../development/contributing.md) to help improve this project

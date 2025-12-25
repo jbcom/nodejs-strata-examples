@@ -8,6 +8,8 @@
  */
 
 import * as THREE from 'three';
+// import type { BiomeData } from '@jbcom/strata';
+type BiomeData = any;
 import {
     createVegetationMesh,
     createGrassInstances,
@@ -15,8 +17,6 @@ import {
     createRockInstances,
     generateInstanceData,
 } from '@jbcom/strata';
-
-type BiomeData = any;
 
 /**
  * Example 1: Basic Grass Instances
@@ -39,9 +39,8 @@ type BiomeData = any;
  */
 export function Example_BasicGrassInstances() {
     // Define simple biomes
-    const biomes: BiomeData[] = [
+    const biomes: any[] = [
         {
-            name: 'grassland',
             threshold: 0,
             color: 0x3a5a2a,
             vegetation: 1.0,
@@ -49,7 +48,7 @@ export function Example_BasicGrassInstances() {
     ];
 
     // Create 1000 grass instances over a 50x50 area
-    const grassMesh = createGrassInstances(1000, 50, biomes);
+    const grassMesh = createGrassInstances(1000, 50, biomes as any);
 
     return {
         mesh: grassMesh,
@@ -90,7 +89,6 @@ export function Example_BasicGrassInstances() {
 export function Example_AdvancedGrassWithHeightFunction() {
     const biomes: BiomeData[] = [
         {
-            name: 'grassland',
             threshold: 0,
             color: 0x3a5a2a,
             vegetation: 1.0,
@@ -166,19 +164,16 @@ export function Example_AdvancedGrassWithHeightFunction() {
 export function Example_MultiBiomeGrassDistribution() {
     const biomes: BiomeData[] = [
         {
-            name: 'grassland',
             threshold: 0,
             color: 0x3a5a2a,
             vegetation: 1.5, // Dense grass in open areas
         },
         {
-            name: 'forest',
             threshold: 0.4,
             color: 0x2a4a1a,
             vegetation: 0.8, // Less grass under tree canopy
         },
         {
-            name: 'rocky',
             threshold: 0.7,
             color: 0x6a6a5a,
             vegetation: 0.2, // Sparse grass on rocky terrain
@@ -229,13 +224,11 @@ export function Example_MultiBiomeGrassDistribution() {
 export function Example_TreeInstances() {
     const biomes: BiomeData[] = [
         {
-            name: 'forest',
             threshold: 0,
             color: 0x2a4a1a,
             vegetation: 1.5, // Dense trees
         },
         {
-            name: 'grassland',
             threshold: 0.6,
             color: 0x3a5a2a,
             vegetation: 0.3, // Scattered trees
@@ -290,13 +283,11 @@ export function Example_TreeInstances() {
 export function Example_RockInstances() {
     const biomes: BiomeData[] = [
         {
-            name: 'rocky',
             threshold: 0,
             color: 0x7a7a6a,
             vegetation: 2.0, // High rock density
         },
         {
-            name: 'grassland',
             threshold: 0.6,
             color: 0x3a5a2a,
             vegetation: 0.3, // Scattered rocks
@@ -357,7 +348,6 @@ export function Example_RockInstances() {
 export function Example_CustomVegetation() {
     const biomes: BiomeData[] = [
         {
-            name: 'flowerbed',
             threshold: 0,
             color: 0x4a7a3a,
             vegetation: 1.8, // Dense flowers
@@ -439,7 +429,6 @@ export function Example_DirectInstanceGeneration() {
             vegetation: 1.0,
         },
         {
-            name: 'grassland',
             threshold: 0.5,
             color: 0x3a5a2a,
             vegetation: 0.5,
@@ -519,19 +508,19 @@ export function Example_CompleteVegetationScene() {
 
     // Define comprehensive biome system
     const grassBiomes: BiomeData[] = [
-        { name: 'grassland', threshold: 0, color: 0x3a5a2a, vegetation: 1.8 },
-        { name: 'forest', threshold: 0.4, color: 0x2a4a1a, vegetation: 0.6 },
-        { name: 'rocky', threshold: 0.7, color: 0x6a6a5a, vegetation: 0.2 },
+        { threshold: 0, color: 0x3a5a2a, vegetation: 1.8 },
+        { threshold: 0.4, color: 0x2a4a1a, vegetation: 0.6 },
+        { threshold: 0.7, color: 0x6a6a5a, vegetation: 0.2 },
     ];
 
     const forestBiomes: BiomeData[] = [
-        { name: 'forest', threshold: 0, color: 0x2a4a1a, vegetation: 2.0 },
-        { name: 'grassland', threshold: 0.6, color: 0x3a5a2a, vegetation: 0.4 },
+        { threshold: 0, color: 0x2a4a1a, vegetation: 2.0 },
+        { threshold: 0.6, color: 0x3a5a2a, vegetation: 0.4 },
     ];
 
     const rockyBiomes: BiomeData[] = [
-        { name: 'rocky', threshold: 0, color: 0x7a7a6a, vegetation: 2.5 },
-        { name: 'grassland', threshold: 0.5, color: 0x3a5a2a, vegetation: 0.5 },
+        { threshold: 0, color: 0x7a7a6a, vegetation: 2.5 },
+        { threshold: 0.5, color: 0x3a5a2a, vegetation: 0.5 },
     ];
 
     const heightFunction = (x: number, z: number): number => {

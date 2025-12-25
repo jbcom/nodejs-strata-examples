@@ -11,17 +11,24 @@
   "license": "MIT",
   "scripts": {
     "build": "pnpm -r build",
+    "build:all": "pnpm build && node scripts/collect-dist.js",
     "dev:terrain": "pnpm --filter basic-terrain dev",
     "dev:water": "pnpm --filter water-scene dev",
     "dev:sky": "pnpm --filter sky-volumetrics dev",
     "dev:vegetation": "pnpm --filter vegetation-showcase dev",
+    "dev:api": "pnpm --filter api-showcase dev",
     "typecheck": "pnpm -r typecheck",
     "test:visual": "playwright test"
   },
   "devDependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
     "@playwright/test": "^1.57.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@react-three/rapier": "^2.2.0",
     "@types/node": "^25.0.3",
-    "typescript": "^5.7.2"
+    "postprocessing": "^6.38.2",
+    "typescript": "^5.7.2",
+    "yuka": "^0.7.8"
   },
   "pnpm": {
     "overrides": {

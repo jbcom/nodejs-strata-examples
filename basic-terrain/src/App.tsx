@@ -2,11 +2,12 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sky } from '@react-three/drei';
 import { useMemo } from 'react';
 import * as THREE from 'three';
+import { fbm } from '@jbcom/strata';
 
 /**
  * Simple terrain using a procedural heightmap
  *
- * This example shows how to create procedural terrain with Strata.
+ * This example shows how to create procedural terrain with Strata's FBM noise.
  * For production use, import from @jbcom/strata instead.
  */
 function Terrain() {
@@ -19,16 +20,13 @@ function Terrain() {
 
     const positions = geo.attributes.position;
 
-    // Apply procedural heightmap
+    // Apply procedural heightmap using Strata's FBM noise
     for (let i = 0; i < positions.count; i++) {
       const x = positions.getX(i);
       const z = positions.getZ(i);
 
-      // Simple noise-like height function
-      const height =
-        Math.sin(x * 0.1) * Math.cos(z * 0.1) * 3 +
-        Math.sin(x * 0.05 + z * 0.05) * 2 +
-        Math.sin(x * 0.2) * Math.sin(z * 0.2) * 1;
+      // Use Strata's fractional brownian motion for natural terrain
+      const height = fbm(x * 0.1, z * 0.1, 4, 2.0, 42) * 4;
 
       positions.setY(i, height);
     }

@@ -45,5 +45,6 @@ docs/
 
 ## Additional Resources
 
+- [Live Examples Dashboard](https://jbcom.github.io/nodejs-strata-examples/) - View live demos of all examples
 - [jbcom Design System](./DESIGN-SYSTEM.md) - Brand specifications
 - [GitHub Pages](https://pages.github.com/) - Hosting documentation

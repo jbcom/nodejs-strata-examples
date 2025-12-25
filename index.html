@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strata 3D Examples | jbcom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-default: #0a0f1a;
+            --bg-paper: #111827;
+            --bg-elevated: #1e293b;
+            --primary: #06b6d4;
+            --primary-light: #22d3ee;
+            --primary-dark: #0891b2;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
+        body {
+            background-color: var(--bg-default);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: var(--space-xl) var(--space-lg);
+            text-align: center;
+            border-bottom: 1px solid var(--bg-elevated);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-lg);
+            flex-grow: 1;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .example-card {
+            background-color: var(--bg-paper);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            border: 1px solid var(--bg-elevated);
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .example-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .example-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin: 0 0 var(--space-md) 0;
+            color: var(--primary);
+        }
+
+        .example-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        footer {
+            padding: var(--space-xl);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--bg-elevated);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            background-color: var(--bg-elevated);
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Strata 3D Examples</h1>
+        <p style="color: var(--text-secondary); margin-top: 8px;">Explore the power of Strata 3D through live demos</p>
+    </header>
+
+    <div class="container">
+        <div class="examples-grid">
+            <a href="basic-terrain/" class="example-card">
+                <span class="badge">Core</span>
+                <h3>Basic Terrain</h3>
+                <p>Learn how to generate procedural terrain with custom heightmaps and textures.</p>
+            </a>
+            <a href="water-scene/" class="example-card">
+                <span class="badge">Shaders</span>
+                <h3>Water Scene</h3>
+                <p>Advanced water rendering with reflections, refractions, and realistic wave motion.</p>
+            </a>
+            <a href="sky-volumetrics/" class="example-card">
+                <span class="badge">Environment</span>
+                <h3>Sky & Volumetrics</h3>
+                <p>Dynamic sky system with volumetric clouds, atmospheric scattering, and day/night cycles.</p>
+            </a>
+            <a href="vegetation-showcase/" class="example-card">
+                <span class="badge">Performance</span>
+                <h3>Vegetation Showcase</h3>
+                <p>Instanced rendering of dense forests and grasslands with wind animation.</p>
+            </a>
+            <a href="api-showcase/" class="example-card">
+                <span class="badge">Interactive</span>
+                <h3>API Showcase</h3>
+                <p>Interactive dashboard to explore various Strata 3D components and their parameters.</p>
+            </a>
+            <a href="api-docs/" class="example-card">
+                <span class="badge">Documentation</span>
+                <h3>API Reference</h3>
+                <p>Comprehensive API documentation with JSDoc-linked examples for every feature.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 jbcom. Built with Strata 3D.
+    </footer>
+</body>
+</html>
