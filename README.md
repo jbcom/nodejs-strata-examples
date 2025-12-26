@@ -1,34 +1,30 @@
 # @strata/examples
 
-## 🏢 Enterprise Context
-
-**Strata** is the Games & Procedural division of the [jbcom enterprise](https://jbcom.github.io). This repository provides example applications for [Strata 3D](https://strata.game), showcasing the unified design system and interconnections with sibling organizations like [Agentic](https://agentic.dev) and [Extended Data](https://extendeddata.dev).
-
 Example applications for [Strata 3D](https://strata.game).
 
-## Live Demos
+## 📚 Documentation
 
-Visit the **[Live Examples Dashboard](https://strata.game/examples/)** to see Strata 3D in action.
+**Full documentation is available at [strata.game](https://strata.game)**
+
+- [Live Showcase](https://strata.game/showcase/)
+- [Getting Started](https://strata.game/getting-started/)
+- [API Reference](https://strata.game/api/)
+
+---
+
+## 🏢 Enterprise Context
+
+**Strata** is the Games & Procedural division of the [jbcom enterprise](https://jbcom.github.io). This repository provides example applications for Strata 3D, showcasing the unified design system and interconnections with sibling organizations like [Agentic](https://agentic.dev) and [Extended Data](https://extendeddata.dev).
 
 ## Examples
 
-### Live Dashboard (New!)
-All examples are now available in a single [Live Examples Dashboard](https://jbcom.github.io/nodejs-strata-examples/).
-
-### Basic Terrain (`basic-terrain/`)
-Simple procedural terrain with heightmap generation and water plane.
-
-### Water Scene (`water-scene/`)
-Advanced water rendering with reflections, refractions, and wave simulation.
-
-### Sky & Volumetrics (`sky-volumetrics/`)
-Procedural sky, clouds, and volumetric effects like god rays and fog.
-
-### Vegetation Showcase (`vegetation-showcase/`)
-Instanced vegetation with wind animation, LOD, and biome distribution.
-
-### API Showcase (`api-showcase/`)
-Comprehensive examples of the Strata API for all major systems.
+| Example | Description | Port |
+|---------|-------------|------|
+| `basic-terrain` | Simple procedural terrain with heightmap generation | 3000 |
+| `water-scene` | Advanced water rendering with reflections and waves | 3001 |
+| `vegetation-showcase` | GPU-instanced vegetation with wind animation | 3002 |
+| `sky-volumetrics` | Procedural sky, clouds, and volumetric effects | 3003 |
+| `api-showcase` | Comprehensive API examples for all systems | 3004 |
 
 ## Getting Started
 
@@ -54,37 +50,11 @@ pnpm dev:api        # API showcase
 - pnpm 8+
 - Modern browser with WebGL2 support
 
-## Structure
+## Related
 
-```
-strata-examples/
-├── basic-terrain/       # Simple terrain example
-├── water-scene/         # Advanced water example
-├── sky-volumetrics/     # Sky and volumetric effects
-├── vegetation-showcase/ # Instanced vegetation
-├── api-showcase/        # API reference examples
-├── scripts/             # Build and collection utilities
-└── pnpm-workspace.yaml
-```
-
-## Dependencies
-
-All examples depend on the published `@jbcom/strata` npm package.
-
-## CI/CD
-
-This repository uses GitHub Actions to verify that all examples build correctly with the latest version of `@jbcom/strata`.
-
-The verification runs:
-- On every push to `main`
-- On every pull request
-- Weekly to check for breaking changes in `@jbcom/strata`
-
-### Live Deployment
-Successfully merged PRs to `main` are automatically deployed to GitHub Pages.
-
-### Visual Regression Tests (Planned)
-Future updates will include automated visual regression tests using Playwright/E2E to ensure visual consistency across strata versions.
+- [Strata Documentation](https://strata.game) - Full documentation
+- [Strata Core](https://github.com/strata-game-library/core) - Main library
+- [Strata Presets](https://github.com/strata-game-library/presets) - Pre-configured settings
 
 ## License
 
