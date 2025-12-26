@@ -1,10 +1,14 @@
-# @jbcom/strata-examples
+# @strata/examples
 
-Example applications for [Strata 3D](https://github.com/jbcom/nodejs-strata).
+## 🏢 Enterprise Context
+
+**Strata** is the Games & Procedural division of the [jbcom enterprise](https://jbcom.github.io). This repository provides example applications for [Strata 3D](https://strata.game), showcasing the unified design system and interconnections with sibling organizations like [Agentic](https://agentic.dev) and [Extended Data](https://extendeddata.dev).
+
+Example applications for [Strata 3D](https://strata.game).
 
 ## Live Demos
 
-Visit the **[Live Examples Dashboard](https://jbcom.github.io/nodejs-strata-examples/)** to see Strata 3D in action.
+Visit the **[Live Examples Dashboard](https://strata.game/examples/)** to see Strata 3D in action.
 
 ## Examples
 
@@ -30,8 +34,8 @@ Comprehensive examples of the Strata API for all major systems.
 
 ```bash
 # Clone the repository
-git clone https://github.com/jbcom/nodejs-strata-examples.git
-cd nodejs-strata-examples
+git clone https://github.com/strata-game-library/examples.git
+cd examples
 
 # Install dependencies
 pnpm install
